@@ -7,15 +7,15 @@ export class RecipeService {
 
   private recipes: Recipe[] = [
     new Recipe(
-      'A Test Recipe', 
+      'Juicy Burguer', 
       'This is simply a test', 
-      'https://live.staticflickr.com/65535/51129289518_94009afae3_b.jpg',
+      'https://i.pinimg.com/736x/96/1d/74/961d74148ad5ab689c75d84c19dc8897.jpg',
       [
         new Ingredient('Meat',1),
         new Ingredient('French Fries',20)
       ]),
       new Recipe(
-        'Another Test Recipe', 
+        'I dont know wth is that', 
         'This is simply a test', 
         'https://live.staticflickr.com/65535/51129289518_94009afae3_b.jpg',
         [
@@ -26,6 +26,10 @@ export class RecipeService {
 
   getRecipes(){
     return this.recipes.slice();
+  }
+
+  getRecipe(index: number){
+    return this.recipes.slice()[index];
   }
 
 
