@@ -1,7 +1,8 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs-compat/operator/map';
-import { tap } from 'rxjs/operators';
+import { exhaustMap, take, tap } from 'rxjs/operators';
+import { AuthService } from '../auth/auth.service';
 import { Recipe } from '../recipes/recipe.model';
 import { RecipeService } from '../recipes/recipe.service';
 
@@ -9,7 +10,8 @@ import { RecipeService } from '../recipes/recipe.service';
 export class DataStorageService {
   constructor(
     private http: HttpClient,
-    private recipesService: RecipeService
+    private recipesService: RecipeService,
+    private authService: AuthService
   ) {}
 
   storeRecipes() {
@@ -30,10 +32,9 @@ export class DataStorageService {
         'https://ng-complete-guide-7e5c3-default-rtdb.firebaseio.com/recipes.json'
       )
       .pipe(
-        tap((recipes : Recipe[]) =>{
+        tap((recipes: Recipe[]) => {
           this.recipesService.setRecipes(recipes);
-        }))
-      ;
-      
+        })
+      );
   }
 }

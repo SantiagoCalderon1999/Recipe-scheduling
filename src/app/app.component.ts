@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from './auth/auth.service';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
 
 @Component({
@@ -7,5 +8,10 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
   styleUrls: ['./app.component.css'],
   providers: [ShoppingListService]
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
+  constructor(private authErvice: AuthService){}
+  
+  ngOnInit(){
+    this.authErvice.autoLogin();
+  }
 }
