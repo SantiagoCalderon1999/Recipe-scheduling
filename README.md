@@ -1,27 +1,34 @@
-# CourseProject
+# Recipes
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.1.
+This repo contains the source code of a pet project aimed for recipe info management. It includes a login feature using JSON Web tokens. This project is connected with firebase API to store the recipe info as well.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Frameworks
+* [Angular CLI](https://github.com/angular/angular-cli) version 14.0.1.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Running locally
 
-## Build
+1. Make sure you have already installed Angular CLI. You may use the following commands, **only if you have not installed it already**:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+````
+npm install -g typescript
+````
 
-## Running unit tests
+````
+npm install -g @angular/cli
+````
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. Install the project dependencies by running the following command.
 
-## Running end-to-end tests
+````
+npm install 
+````
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. Run a local dev server using this command.
 
-## Further help
+````
+ng serve
+````
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+4. Open the application by navigating to http://localhost:4200/. As a matter of fact, the application will automatically reload if you change any of the source files.
