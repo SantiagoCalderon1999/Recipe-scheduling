@@ -1,8 +1,23 @@
-<app-header></app-header>
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <router-outlet></router-outlet>
+<mat-sidenav-container [hasBackdrop]="true" fullscreen>
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened">
+    <mat-nav-list>
+
+      <h2 matSubheader> {{ 'DATA OPTIONS'  }} </h2>
+
+      <app-sidebar></app-sidebar>
+
+    </mat-nav-list>
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-header (toggleSidebar)="sidenav.toggle()"></app-header>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

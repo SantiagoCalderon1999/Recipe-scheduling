@@ -9,8 +9,9 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
   providers: [ShoppingListService]
 })
 export class AppComponent implements OnInit{
+  opened: boolean;
   constructor(private authErvice: AuthService){}
-  
+
   ngOnInit(){
     this.authErvice.autoLogin();
   }

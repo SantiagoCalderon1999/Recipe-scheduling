@@ -1,0 +1,18 @@
+<!--<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened">
+    Sidenav content
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <p><button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button></p>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+-->
+<a mat-list-item (click)="onSaveData()">
+  <mat-icon> cloud_upload </mat-icon>
+  &nbsp;&nbsp;&nbsp;&nbsp; Save Data  &nbsp;&nbsp;&nbsp;
+</a>
+
+<a mat-list-item (click)="onFetchData()">
+  <mat-icon>cloud_download</mat-icon>
+  &nbsp;&nbsp;&nbsp;&nbsp; Fetch Data &nbsp;&nbsp;&nbsp;
+</a>

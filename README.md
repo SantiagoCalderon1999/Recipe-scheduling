@@ -3,8 +3,9 @@
 This repo contains the source code of a pet project aimed for recipe info management. It includes a login feature using JSON Web tokens. This project is connected with firebase API to store the recipe info as well.
 
 
-## Frameworks
-* [Angular CLI](https://github.com/angular/angular-cli) version 14.0.1.
+## Built with
+* [Angular](https://angular.io/)
+* [Angular Material](https://material.angular.io/)
 
 
 ## Running locally
