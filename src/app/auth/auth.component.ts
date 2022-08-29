@@ -18,8 +18,9 @@ export class AuthComponent {
 
   constructor(private authService: AuthService, private router: Router){}
 
-  onSwitchMode(){
+  onSwitchMode(form: NgForm){
     this.isLoginMode = !this.isLoginMode;
+    form.reset();
   }
 
   onSubmit(form: NgForm){
