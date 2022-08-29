@@ -9,22 +9,22 @@ import { AuthResponseData, AuthService } from "./auth.service";
 @Component({
   selector: 'app-auth',
   templateUrl: './auth.component.html',
-  styleUrls: ['./auth.component.css']
+  styleUrls: ['./auth.component.css'],
 })
 export class AuthComponent {
   isLoginMode = true;
   isLoading = false;
   error: string = null;
 
-  constructor(private authService: AuthService, private router: Router){}
+  constructor(private authService: AuthService, private router: Router) {}
 
-  onSwitchMode(form: NgForm){
+  onSwitchMode(form: NgForm) {
     this.isLoginMode = !this.isLoginMode;
     form.reset();
   }
 
-  onSubmit(form: NgForm){
-    if(!form.valid){
+  onSubmit(form: NgForm) {
+    if (!form.valid) {
       return;
     }
     const email = form.value.email;
@@ -34,10 +34,10 @@ export class AuthComponent {
 
     let authObs: Observable<AuthResponseData>;
 
-    if(this.isLoginMode){
+    if (this.isLoginMode) {
       authObs = this.authService.login(email, password);
     } else {
-      authObs = this.authService.signup(email, password)
+      authObs = this.authService.signup(email, password);
     }
 
     authObs.subscribe(
@@ -56,7 +56,7 @@ export class AuthComponent {
     form.reset();
   }
 
-  onHandleError(){
+  onHandleError() {
     this.error = null;
   }
 }

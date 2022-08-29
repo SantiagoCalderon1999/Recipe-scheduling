@@ -1,0 +1,10 @@
+.mat-card{
+  cursor: pointer;
+}
+.mat-card:hover{
+  background: rgb(248, 248, 248);
+}
+
+.active-mat{
+  background: rgb(248, 248, 248);
+}

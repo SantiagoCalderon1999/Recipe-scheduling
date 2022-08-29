@@ -1,0 +1,12 @@
+:host {
+  background: rgb(245, 245, 245);
+}
+.mat-table {
+  width: 100%;
+}
+.row-item{
+  cursor: pointer;
+}
+.row-item:hover{
+  background: rgb(248, 248, 248);
+}
